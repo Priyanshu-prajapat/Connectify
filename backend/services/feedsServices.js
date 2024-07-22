@@ -5,8 +5,9 @@ export function getAllFeeds(req, res) {
 }
 
 export function getParticularFeed(req, res) {
-    const num = req.params;
+    console.log(req.params)
+    const num = req.params.postId;
     if (req.params)
-        return res.status(200).send("we sending post NO.", num)
-    return res.status(200).send("post not found.")
+        return res.status("300").send("we sending post NO.", num)
+    return res.status("200").send("post not found.")
 }
